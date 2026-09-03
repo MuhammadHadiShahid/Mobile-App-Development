@@ -78,41 +78,95 @@ void main(){
 
   // print('Keys with length 4: ${keysWithLength4.toList()}');
 
-Map<String, Map<String, Map<String, String>>> world = {
-    "countries": {
-      "USA": {
-        "capitalcity": "washington, D.C.",
-        "currency": "USD",
-        "language": "english",
-      },
-      "Pakistan": {
-        "capitalcity": "Islamabad",
-        "currency": "PKR",
-        "language": "Urdu",
-      },
-      "Japan": {
-        "capitalcity": "Tokyo",
-        "currency": "JPY",
-        "language": "Japanese",
-      },
-    } 
-  };
+// Map<String, Map<String, Map<String, String>>> world = {
+//     "countries": {
+//       "USA": {
+//         "capitalcity": "washington, D.C.",
+//         "currency": "USD",
+//         "language": "english",
+//       },
+//       "Pakistan": {
+//         "capitalcity": "Islamabad",
+//         "currency": "PKR",
+//         "language": "Urdu",
+//       },
+//       "Japan": {
+//         "capitalcity": "Tokyo",
+//         "currency": "JPY",
+//         "language": "Japanese",
+//       },
+//     } 
+//   };
  
 
- var usaData = world["countries"]?["USA"];
-  print("Capital: ${usaData?['capitalcity']}");
-  print("Currency: ${usaData?['currency']}");
+//  var usaData = world["countries"]?["USA"];
+//   print("Capital: ${usaData?['capitalcity']}");
+//   print("Currency: ${usaData?['currency']}");
 
-var PakistanData = world["countries"]?["Pakistan"];
-  print("Capital: ${PakistanData?['capitalcity']}");
-  print("Currency: ${PakistanData?['currency']}"); 
+// var PakistanData = world["countries"]?["Pakistan"];
+//   print("Capital: ${PakistanData?['capitalcity']}");
+//   print("Currency: ${PakistanData?['currency']}"); 
 
-var JapanData = world["countries"]?["Japan"];
-  print("Capital: ${JapanData?['capitalcity']}");
-  print("Currency: ${JapanData?['currency']}"); 
+// var JapanData = world["countries"]?["Japan"];
+//   print("Capital: ${JapanData?['capitalcity']}");
+//   print("Currency: ${JapanData?['currency']}"); 
+
+
+
+  // Map<String, double> expenses = {
+  //   'sun': 3000.0,
+  //   'mon': 3000.0,
+  //   'tue': 3234.0,
+  // };
+
+  // if 
+  // (expenses.containsKey("fri")) {
+  //   expenses["fri"] = 5000.0;
+  // } 
+  // else {
+  //   expenses["fri"] = 5000.0;
+  // }
+
+  // print(expenses);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 }
-
 
 
 

@@ -5,167 +5,180 @@
 
 void main(){
 
-// List <String> names = ["Ali" , "Hadi" , "Taha" , "Affan" , "Ahmed"];
+List<Map<String, dynamic>> usersEligibility = [
+    {'name': 'John', 'eligible': true},
+    {'name': 'Alice', 'eligible': false},
+    {'name': 'Mike', 'eligible': true},
+    {'name': 'Sarah', 'eligible': true},
+    {'name': 'Tom', 'eligible': false},
+  ];
 
-// names.forEach((name) {
-//     print(name);
-//   });
+  usersEligibility.removeWhere((user) => user['eligible'] == false);
 
+  print(usersEligibility);
 
-// List <String>day = [];
 
-// day.add("Monday");
-// day.add("Tuesday");
-// day.add("Wednesday");
-// day.add("Thursday");
-// day.add("Friday");
-// day.add("Saturday");
-// day.add("Sunday");
 
-// day.forEach ((day) {
-//   print(day);
-// });
+  List<int> digit = [12, 45, 7, 89, 34, 2, 67];
 
+  int maxValue = digit.reduce((a, b) => a > b ? a : b);
 
-//  List days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+  print("Maximum value: $maxValue");
 
-//    print(days);
 
-//    days.removeLast();
-//    print(days);
+   List<String> words = ["apple", "banana", "apple", "orange", "banana", "grape"];
 
-//    days.removeLast();
-//    print(days);
+  List<String> uniqueWords = words.toSet().toList();
 
-//    days.removeLast();
-//    print(days);
+  print(uniqueWords);
 
-//    days.removeLast();
-//    print(days);
 
-//    days.removeLast();
-//    print(days);
+  List<int> number = [10, 20, 30, 40, 50, 60];
+  int n = 3;
 
-//    days.removeLast();
-//    print(days);
+  List<int> result = firstN(number, n);
 
-//    days.removeLast();
-//    print(days);
+  print(result);
+}
 
 
-// List number = [40, 15, 85, 10, 66, 29, 50, 8];
+List<int> firstN(List<int> list, int n) {
+  return list.take(n).toList();
 
-//   int smallest = number.reduce((a, b) => a < b ? a : b);
-//   int greatest = number.reduce((a, b) => a > b ? a : b);
 
-  
-//   print('number: $number');
-//   print('Smallest: $smallest');
-//   print('Greatest: $greatest');
+ List<String> fruits = ["apple", "banana", "cherry", "mango"];
 
+  List<String> reversedFruits = fruits.reversed.toList();
 
-  // Map<String, String> contacts = {
-  //   "Zain": "123-456-7890",
-  //   "Rayya": "987-654-3210",
-  //   "Hamza": "555-123-4567",
-  //   "Tariq": "444-987-6543",
-  //   "siddique": "111-222-3333",
-  // };
+  print("Original list: $fruits");
+  print("Reversed list: $reversedFruits");
 
 
-  // Iterable<String> keysWithLength4 = contacts.keys.where((key) => key.length == 4);
+List<int> numbers = [4, 8, 4, 2, 9, 8, 1, 2, 5];
 
+  List<int> uniqueNumbers = numbers.toSet().toList();
 
-  // print('Keys with length 4: ${keysWithLength4.toList()}');
+  print(uniqueNumbers);
 
-// Map<String, Map<String, Map<String, String>>> world = {
-//     "countries": {
-//       "USA": {
-//         "capitalcity": "washington, D.C.",
-//         "currency": "USD",
-//         "language": "english",
-//       },
-//       "Pakistan": {
-//         "capitalcity": "Islamabad",
-//         "currency": "PKR",
-//         "language": "Urdu",
-//       },
-//       "Japan": {
-//         "capitalcity": "Tokyo",
-//         "currency": "JPY",
-//         "language": "Japanese",
-//       },
-//     } 
-//   };
- 
 
-//  var usaData = world["countries"]?["USA"];
-//   print("Capital: ${usaData?['capitalcity']}");
-//   print("Currency: ${usaData?['currency']}");
+  List<int> number = [8, 3, 10, 1, 6, 4];
 
-// var PakistanData = world["countries"]?["Pakistan"];
-//   print("Capital: ${PakistanData?['capitalcity']}");
-//   print("Currency: ${PakistanData?['currency']}"); 
+  List<int> sortedNumber = List.from(number)..sort();
 
-// var JapanData = world["countries"]?["Japan"];
-//   print("Capital: ${JapanData?['capitalcity']}");
-//   print("Currency: ${JapanData?['currency']}"); 
+  print("Original list: $number");
+  print("Sorted list: $sortedNumber");
 
 
+List<int> numbe = [4, -7, 10, -2, 0, 15, -9, 6];
 
-  // Map<String, double> expenses = {
-  //   'sun': 3000.0,
-  //   'mon': 3000.0,
-  //   'tue': 3234.0,
-  // };
+  List<int> positiveNumbe = filterPositive(numbe);
 
-  // if 
-  // (expenses.containsKey("fri")) {
-  //   expenses["fri"] = 5000.0;
-  // } 
-  // else {
-  //   expenses["fri"] = 5000.0;
-  // }
+  print(positiveNumbe);
+}
 
-  // print(expenses);
+List<int> filterPositive(List<int> list) {
+  return list.where((num) => num >= 0).toList();
 
 
+List<int> digits = [4, 7, 10, 3, 8, 15, 6, 9];
 
+  List<int> evenDigits = filterEven(digits);
 
+  print(evenDigits);
+}
 
+List<int> filterEven(List<int> list) {
+  return list.where((num) => num % 2 == 0).toList();
 
 
+ List<int> numbers = [2, 4, 6, 8, 10];
 
+  List<int> squaredNumbers = squareList(numbers);
 
+  print(squaredNumbers);
+}
 
+List<int> squareList(List<int> list) {
+  return list.map((num) => num * num).toList();
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+Map<String, dynamic> person = {
+    "name": "John",
+    "age": 25,
+    "isStudent": true,
+  };
+
+  if 
+  (person["isStudent"] == true && person["age"] > 18) {
+    print("Eligible");
+  } 
+ else {
+    print("Not eligible");
+  }
+
+
+
+  Map<String, dynamic> product = {
+    "name": "Laptop",
+    "price": 75000.0,
+    "quantity": 5,
+  };
+
+  if 
+  (product["quantity"] > 0) {
+    print("In stock");
+  } 
+  else {
+    print("Out of stock");
+  }
+
+
+  Map<String, dynamic> car = {
+    "brand": "Toyota",
+    "color": "Red",
+    "isSedan": true,
+  };
+
+  if 
+  (car["isSedan"] == true && car["color"] == "Red") {
+    print("Match");
+  } 
+  else {
+    print("No match");
+  }
+
+
+
+  Map<String, dynamic> user = {
+    "name": "Taha",
+    "isAdmin": true,
+    "isActive": true,
+  };
+
+  if 
+  (user["isAdmin"] == true && user["isActive"] == true) {
+    print("Active admin");
+  } 
+  else {
+    print("Not an active admin");
+  }
+
+
+
+  Map<String, int> cart = {
+    "Apple": 3,
+    "Banana": 5,
+    "Milk": 2,
+  };
+
+  if 
+  (cart.containsKey("Apple")) {
+    print("Product found");
+  } 
+  else {
+    print("Product not found");
+  }
 }
 
 
